@@ -4,11 +4,8 @@ var app = express();
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
-var contents = fs.readFileSync('index.html');
-var contentString = Buffer.toString(contents);
-
 app.get('/', function(request, response) {
-  response.send(contentString)
+  response.send('Hello World 2');
 })
 
 app.listen(app.get('port'), function() {
