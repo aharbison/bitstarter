@@ -7,10 +7,10 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 var contents = fs.readFileSync('index.html');
-var stringContents = buf.toString(contents); 
+
 
 app.get('/', function(request, response) {
-    response.send(stringContents);
+    response.send(buf.toString(contents));
 })
 
 app.listen(app.get('port'), function() {
