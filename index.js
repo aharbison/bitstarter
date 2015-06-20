@@ -10,7 +10,7 @@ var contents = fs.readFileSync('index.html');
 
 
 app.get('/', function(request, response) {
-    response.send(buf.toString(contents));
+    response.send(buffer.toString(contents));
 })
 
 app.listen(app.get('port'), function() {
